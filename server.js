@@ -2,7 +2,7 @@ let express = require("express");
 let app = express();
 let hbs = require("hbs");
 let fs = require("fs");
-let port = process.set.PORT || 3000;
+let port = process.env.PORT || 3000;
 
 hbs.registerPartials(__dirname + "/views/partials");
 hbs.registerHelper("getCurrentyear", () => {
