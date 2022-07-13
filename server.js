@@ -2,6 +2,7 @@ let express = require("express");
 let app = express();
 let hbs = require("hbs");
 let fs = require("fs");
+let port = process.set.PORT || 3000;
 
 hbs.registerPartials(__dirname + "/views/partials");
 hbs.registerHelper("getCurrentyear", () => {
@@ -50,6 +51,6 @@ app.get("/bad", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log(`app is listening on port : 3000`);
+app.listen(port, () => {
+  console.log(`app is listening on port : ${port}`);
 });
