@@ -34,7 +34,7 @@ app.set("view engine", "hbs");
 
 app.get("/", (req, res) => {
   //   res.send("<h1>Hello World</h1>");
-  res.render("home.hbs", {
+  res.render("Home.hbs", {
     pageTitle: "About page",
     welcome: "Hello This is the HomePage",
   });
